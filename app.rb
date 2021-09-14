@@ -12,12 +12,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = [
-      "www.lukesdentist.com",
-      "www.bobsdentist.com",
-      "www.google.com"
-    ]
-
+    @bookmarks = Bookmark.all
     erb :'bookmarks/index'
   end
 
