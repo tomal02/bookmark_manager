@@ -2,6 +2,9 @@ As a user,
 so that I can access pages that I have bookmarked,
 I can view the list of my bookmarks
 
+As a user, so that I can store my bookmarks,
+I can add new bookmarks to the database
+
 ![bookmark_domain_diagram](https://github.com/makersacademy/course/blob/main/bookmark_manager/images/bookmark_manager_1.png)
 
 # How to set up the main database:
