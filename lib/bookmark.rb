@@ -27,7 +27,7 @@ class Bookmark
     else
       con = PG.connect(dbname: 'bookmark_manager')
     end
-    result = con.exec("INSERT INTO bookmarks (title, url) VALUES ('#{title}', '#{url}') RETURNING id, url, title")
+    result = con.exec_params("INSERT INTO bookmarks (url, title) VALUES ($1, $2) RETURNING id, url, title", [url, title])
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 end
